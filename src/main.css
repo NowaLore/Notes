@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
+
+body.dark {
+    background-color: #2f353b;
+}
+
+.icon-wrapper {
+    background-image: url(./img/sun-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.dark .icon-wrapper {
+    background-image: url(./img/sun-icon-dark.svg);
+}
