@@ -9017,25 +9017,35 @@ const creatorElement = paramsElement => {
 ;// ./src/header/params/header-params.js
 const headerParams = {
   tagName: "header",
-  classList: ["border-cyan-600", "border-solid", "border-b-2", "py-2.5", "flex", "justify-between", "container"]
+  classList: ["border-cyan-600", "border-solid", "border-b-2", "py-2.5", "flex", "justify-between", "container", "dark:border-white"]
 };
 const titleParams = {
   tagName: "h1",
-  classList: ["text-3xl", "font-medium", "font-['Roboto_Slab']", "text-cyan-600"],
+  classList: ["text-3xl", "font-medium", "font-['Roboto_Slab']", "text-cyan-600", "dark:text-white"],
   text: "To-Do"
 };
 const nightmodeButtonParams = {
   tagName: "button",
-  classList: ["h-10", "w-10", "rounded-full", "bg-no-repeat", "bg-center", "bg-cyan-600",
-  //
-  "flex", "justify-center", "items-center"],
+  classList: ["night-button", "h-10", "w-10", "rounded-full", "bg-no-repeat", "bg-center", "bg-cyan-600", "dark:bg-white", "flex", "justify-center", "items-center"],
   attr: {
     id: "nightBtn"
   }
 };
 const iconWrapperParams = {
   tagName: "span",
-  classList: ["block", "h-8", "w-8", "rounded-full", "bg-white"]
+  classList: ["icon-wrapper", "block", "h-8", "w-8", "rounded-full"]
+};
+const addNoteParams = {
+  tagName: "button",
+  classList: []
+};
+const addNoteTextParams = {
+  tagName: "span",
+  classList: []
+};
+const addNoteIconParams = {
+  tagName: "span",
+  classList: []
 };
 
 ;// ./src/header/header-viev.js
@@ -9046,9 +9056,14 @@ const headerCreator = () => {
   const title = creator(titleParams);
   const nightmodeBtn = creator(nightmodeButtonParams);
   const iconWrapper = creator(iconWrapperParams);
+  const addNote = creator(addNoteParams);
+  const addNoteText = creator(addNoteTextParams);
+  const addNoteIcon = creator(addNoteIconParams);
   header.append(title);
   header.append(nightmodeBtn);
   nightmodeBtn.append(iconWrapper);
+  addNote.append(addNoteText);
+  addNote.append(addNoteIcon);
   return header;
 };
 /* harmony default export */ const header_viev = (headerCreator);
@@ -9057,6 +9072,10 @@ const headerCreator = () => {
 const init = () => {
   const appContainer = document.body;
   const headerElement = header_viev();
+  const darkModeBtn = headerElement.querySelector("#nightBtn");
+  darkModeBtn.addEventListener("click", () => {
+    appContainer.classList.toggle("dark");
+  });
   appContainer.append(headerElement);
 };
 /* harmony default export */ const utilites_init = (init);

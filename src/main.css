@@ -17,3 +17,15 @@ body.dark {
 body.dark .icon-wrapper {
     background-image: url(./img/sun-icon-dark.svg);
 }
+
+.icon-addnote {
+    background-image: url(./img/btn-add-note__icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.dark .icon-addnote {
+    background-image: url(./img/btn-add-note__icon-dark.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
