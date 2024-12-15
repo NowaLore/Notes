@@ -9014,6 +9014,107 @@ const creatorElement = paramsElement => {
   return element;
 };
 /* harmony default export */ const creator = (creatorElement);
+;// ./src/modal/modal-params.js
+const formParams = {
+  tagName: "form",
+  classList: ["py-9", "px-7", "max-w-[915px]", "w-full", "bg-white", "rounded-xl"]
+};
+const headerFormParams = {
+  tagName: "div",
+  classList: ["border-cyan-600", "border-solid", "border-b-2"]
+};
+const titleInputParams = {
+  tagName: "input",
+  classList: ["text-2xl"]
+};
+const favoriteInputParams = {
+  tagName: "input",
+  classList: ["real-checkbox"],
+  attr: {
+    type: "checkbox"
+  }
+};
+const textareaParams = {
+  tagName: "textarea",
+  classList: ["note-form"]
+};
+const buttonFormParams = {
+  tagName: "div",
+  classList: []
+};
+const cancelBtnParams = {
+  tagName: "button",
+  classList: []
+};
+const addBtnParams = {
+  tagName: "button",
+  classList: []
+};
+const fadeParams = {
+  tagName: "div",
+  classList: []
+};
+
+;// ./src/modal/modal.js
+
+
+const modalCreator = () => {
+  const appContainer = document.body;
+  const form = creator(formParams);
+  const headerForm = creator(headerFormParams);
+  form.append(headerForm);
+  const fade = creator(fadeParams);
+  const titleInput = creator(titleInputParams);
+  const favoriteInput = creator(favoriteInputParams);
+  headerForm.append(titleInput);
+  headerForm.append(favoriteInput);
+  const textarea = creator(textareaParams);
+  form.append(textarea);
+  const buttonForm = creator(buttonFormParams);
+  const cancelBtn = creator(cancelBtnParams);
+  const addBtn = creator(addBtnParams);
+  buttonForm.append(cancelBtn);
+  buttonForm.append(addBtn);
+  form.append(buttonForm);
+  appContainer.append(fade);
+  appContainer.append(form);
+};
+/* harmony default export */ const modal = (modalCreator);
+;// ./src/btn-control/btn-control-params.js
+const addNoteParams = {
+  tagName: "button",
+  classList: ["flex", "items-center", "gap-2", "mx-auto", "mt-10"]
+};
+const addNoteTextParams = {
+  tagName: "span",
+  text: "Add Note",
+  classList: ["text-2xl", "font-medium", "text-cyan-600", "dark:text-white"]
+};
+const addNoteIconParams = {
+  tagName: "span",
+  classList: ["icon-addnote", "block", "w-10", "h-10"]
+};
+const wrapperControlParams = {
+  tagName: "div",
+  classList: []
+};
+
+;// ./src/btn-control/btn-control-view.js
+
+
+
+const btnCreator = () => {
+  const wrapperControl = creator(wrapperControlParams);
+  const addNote = creator(addNoteParams);
+  const addNoteText = creator(addNoteTextParams);
+  const addNoteIcon = creator(addNoteIconParams);
+  addNote.addEventListener("click", modal);
+  addNote.append(addNoteText);
+  addNote.append(addNoteIcon);
+  wrapperControl.append(addNote);
+  return wrapperControl;
+};
+/* harmony default export */ const btn_control_view = (btnCreator);
 ;// ./src/header/params/header-params.js
 const headerParams = {
   tagName: "header",
@@ -9035,18 +9136,6 @@ const iconWrapperParams = {
   tagName: "span",
   classList: ["icon-wrapper", "block", "h-8", "w-8", "rounded-full"]
 };
-const addNoteParams = {
-  tagName: "button",
-  classList: []
-};
-const addNoteTextParams = {
-  tagName: "span",
-  classList: []
-};
-const addNoteIconParams = {
-  tagName: "span",
-  classList: []
-};
 
 ;// ./src/header/header-viev.js
 
@@ -9056,29 +9145,29 @@ const headerCreator = () => {
   const title = creator(titleParams);
   const nightmodeBtn = creator(nightmodeButtonParams);
   const iconWrapper = creator(iconWrapperParams);
-  const addNote = creator(addNoteParams);
-  const addNoteText = creator(addNoteTextParams);
-  const addNoteIcon = creator(addNoteIconParams);
   header.append(title);
   header.append(nightmodeBtn);
   nightmodeBtn.append(iconWrapper);
-  addNote.append(addNoteText);
-  addNote.append(addNoteIcon);
   return header;
 };
 /* harmony default export */ const header_viev = (headerCreator);
 ;// ./src/utilites/init.js
 
+
 const init = () => {
   const appContainer = document.body;
   const headerElement = header_viev();
+  const wrapperControl = btn_control_view();
   const darkModeBtn = headerElement.querySelector("#nightBtn");
   darkModeBtn.addEventListener("click", () => {
     appContainer.classList.toggle("dark");
   });
   appContainer.append(headerElement);
+  appContainer.append(wrapperControl);
 };
 /* harmony default export */ const utilites_init = (init);
+
+// Вынести прослушку в файл кнопки или хедера
 ;// ./src/index.js
 
 

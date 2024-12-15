@@ -1,3 +1,4 @@
+import modalCreator from "../modal/modal.js";
 import creatorElement from "../utilites/creator.js";
 import {
     addNoteIconParams,
@@ -11,6 +12,8 @@ const btnCreator = () => {
     const addNote = creatorElement(addNoteParams);
     const addNoteText = creatorElement(addNoteTextParams);
     const addNoteIcon = creatorElement(addNoteIconParams);
+
+    addNote.addEventListener("click", modalCreator);
 
     addNote.append(addNoteText);
     addNote.append(addNoteIcon);

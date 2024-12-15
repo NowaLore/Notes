@@ -29,3 +29,55 @@ body.dark .icon-addnote {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.custom-checkbox {
+    background-image: url(./img/star-btn.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.real-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.real-checkbox:checked + .custom-checkbox {
+    background-image: url(./img/star-btn-gold.svg);
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #189ab4;
+    cursor: pointer;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 10px;
+    border: 3px solid #189ab4;
+    cursor: pointer;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #fcfcfc;
+    cursor: pointer;
+}
+
+.scrollbar::-webkit-resizer {
+    border: 2px solid black;
+    outline: none;
+    border: 20px solid transparent;
+    border-right: 20px solid #189ab4;
+    border-bottom: 20px solid #189ab4;
+}
