@@ -9017,15 +9017,23 @@ const creatorElement = paramsElement => {
 ;// ./src/modal/modal-params.js
 const formParams = {
   tagName: "form",
-  classList: ["py-9", "px-7", "max-w-[915px]", "w-full", "bg-white", "rounded-xl"]
+  classList: ["py-9", "px-7", "max-w-[915px]", "w-full", "bg-white", "rounded-xl", "fixed", "bottom-1/2", "right-1/2", "translate-x-1/2", "translate-y-1/2"]
 };
 const headerFormParams = {
   tagName: "div",
-  classList: ["border-cyan-600", "border-solid", "border-b-2"]
+  classList: ["border-cyan-600", "border-solid", "border-b-2", "max-w-[362px]", "flex", "gap-2", "mb-[10px]"]
 };
 const titleInputParams = {
   tagName: "input",
-  classList: ["text-2xl"]
+  classList: ["text-2xl", "font-medium", "outline-none", "max-w-[330px]", "w-full"]
+};
+const customCheckboxParams = {
+  tagName: "span",
+  classList: ["custom-checkbox"]
+};
+const wrapperLabelParams = {
+  tagName: "label",
+  classList: []
 };
 const favoriteInputParams = {
   tagName: "input",
@@ -9036,19 +9044,21 @@ const favoriteInputParams = {
 };
 const textareaParams = {
   tagName: "textarea",
-  classList: ["note-form"]
+  classList: ["scrollbar", "w-full", "min-h-[200px]", "max-h-[450px]", "outline-none", "focus:shadow-lg"]
 };
 const buttonFormParams = {
   tagName: "div",
-  classList: []
+  classList: ["flex", "gap-4", "justify-end"]
 };
 const cancelBtnParams = {
   tagName: "button",
-  classList: []
+  classList: ["max-w-[107px]", "w-full", "h-9", "bg-rose-800", "rounded-xl", "text-white", "text-xl", "font-medium"],
+  text: "Cancel"
 };
 const addBtnParams = {
   tagName: "button",
-  classList: []
+  classList: ["max-w-[107px]", "w-full", "h-9", "bg-cyan-600", "rounded-xl", "text-white", "text-xl", "font-medium"],
+  text: "Add"
 };
 const fadeParams = {
   tagName: "div",
@@ -9066,8 +9076,12 @@ const modalCreator = () => {
   const fade = creator(fadeParams);
   const titleInput = creator(titleInputParams);
   const favoriteInput = creator(favoriteInputParams);
+  const fakeCheckbox = creator(customCheckboxParams);
   headerForm.append(titleInput);
-  headerForm.append(favoriteInput);
+  const label = creator(wrapperLabelParams);
+  label.append(favoriteInput);
+  label.append(fakeCheckbox);
+  headerForm.append(label);
   const textarea = creator(textareaParams);
   form.append(textarea);
   const buttonForm = creator(buttonFormParams);

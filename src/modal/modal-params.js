@@ -66,22 +66,43 @@ const textareaParams = {
         "max-h-[450px]",
         "outline-none",
         "focus:shadow-lg",
+        "mb-4",
     ],
 };
 
 const buttonFormParams = {
     tagName: "div",
-    classList: [],
+    classList: ["flex", "gap-4", "justify-end"],
 };
 
 const cancelBtnParams = {
     tagName: "button",
-    classList: [],
+    classList: [
+        "py-2",
+        "px-4",
+        "min-w-[107px]",
+        "bg-rose-800",
+        "rounded-xl",
+        "text-white",
+        "text-xl",
+        "font-medium",
+    ],
+    text: "Cancel",
 };
 
 const addBtnParams = {
     tagName: "button",
-    classList: [],
+    classList: [
+        "py-2",
+        "px-4",
+        "min-w-[107px]",
+        "bg-cyan-600",
+        "rounded-xl",
+        "text-white",
+        "text-xl",
+        "font-medium",
+    ],
+    text: "Add",
 };
 
 const fadeParams = {
