@@ -107,7 +107,14 @@ const addBtnParams = {
 
 const fadeParams = {
     tagName: "div",
-    classList: [],
+    classList: [
+        "w-full",
+        "h-screen",
+        "bg-[#e0e0e0bc]",
+        "fixed",
+        "left-0",
+        "top-0",
+    ],
 };
 
 export {

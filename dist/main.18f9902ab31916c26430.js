@@ -9062,7 +9062,7 @@ const addBtnParams = {
 };
 const fadeParams = {
   tagName: "div",
-  classList: []
+  classList: ["w-full", "h-screen", "blur", "bg-[#e0e0e0a5]", "fixed", "left-0", "top-0"]
 };
 
 ;// ./src/modal/modal.js
@@ -9165,10 +9165,39 @@ const headerCreator = () => {
   return header;
 };
 /* harmony default export */ const header_viev = (headerCreator);
+;// ./src/utilites/data-handler.js
+const setDataToStorage = data => {
+  const key = "notes";
+  const dataString = JSON.stringify(data);
+  localStorage.setItem(key, dataString);
+};
+const getDataFromStorage = () => {
+  const key = "notes";
+  const data = JSON.parse(localStorage.getItem(key));
+  return data;
+};
+const initData = () => {
+  let dataStructure = getDataFromStorage();
+  if (!dataStructure) {
+    dataStructure = {
+      regularNotes: [],
+      favoriteNotes: []
+    };
+  }
+  setDataToStorage(dataStructure);
+  return dataStructure;
+};
+
+// const notes = initData();
+// console.log(notes);
+
+/* harmony default export */ const data_handler = (initData);
 ;// ./src/utilites/init.js
 
 
+
 const init = () => {
+  data_handler();
   const appContainer = document.body;
   const headerElement = header_viev();
   const wrapperControl = btn_control_view();
