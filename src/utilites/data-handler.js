@@ -1,11 +1,12 @@
 const setDataToStorage = (data) => {
     const key = "notes";
-    localStorage.setItem(key, data);
+    const dataString = JSON.stringify(data);
+    localStorage.setItem(key, dataString);
 };
 
 const getDataFromStorage = () => {
     const key = "notes";
-    const data = localStorage.getItem(key);
+    const data = JSON.parse(localStorage.getItem(key));
     return data;
 };
 
@@ -24,11 +25,7 @@ const initData = () => {
     return dataStructure;
 };
 
-const notes = initData();
-console.log(notes);
+// const notes = initData();
+// console.log(notes);
 
 export default initData;
-
-// 1. Создать функцию initData
-// 1.1 Сделать запрос в локальное хранилище
-// 1.2 Создать функцию для создания базовой структуры

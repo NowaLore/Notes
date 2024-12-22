@@ -9044,7 +9044,7 @@ const favoriteInputParams = {
 };
 const textareaParams = {
   tagName: "textarea",
-  classList: ["scrollbar", "w-full", "min-h-[200px]", "max-h-[450px]", "outline-none", "focus:shadow-lg"]
+  classList: ["scrollbar", "w-full", "min-h-[200px]", "max-h-[450px]", "outline-none", "focus:shadow-lg", "mb-4"]
 };
 const buttonFormParams = {
   tagName: "div",
@@ -9052,12 +9052,12 @@ const buttonFormParams = {
 };
 const cancelBtnParams = {
   tagName: "button",
-  classList: ["max-w-[107px]", "w-full", "h-9", "bg-rose-800", "rounded-xl", "text-white", "text-xl", "font-medium"],
+  classList: ["py-2", "px-4", "min-w-[107px]", "bg-rose-800", "rounded-xl", "text-white", "text-xl", "font-medium"],
   text: "Cancel"
 };
 const addBtnParams = {
   tagName: "button",
-  classList: ["max-w-[107px]", "w-full", "h-9", "bg-cyan-600", "rounded-xl", "text-white", "text-xl", "font-medium"],
+  classList: ["py-2", "px-4", "min-w-[107px]", "bg-cyan-600", "rounded-xl", "text-white", "text-xl", "font-medium"],
   text: "Add"
 };
 const fadeParams = {

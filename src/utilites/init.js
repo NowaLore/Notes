@@ -1,7 +1,9 @@
 import btnCreator from "../btn-control/btn-control-view.js";
 import headerCreator from "../header/header-viev.js";
+import initData from "./data-handler.js";
 
 const init = () => {
+    initData();
     const appContainer = document.body;
     const headerElement = headerCreator();
     const wrapperControl = btnCreator();
