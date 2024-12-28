@@ -9062,7 +9062,7 @@ const addBtnParams = {
 };
 const fadeParams = {
   tagName: "div",
-  classList: ["w-full", "h-screen", "blur", "bg-[#e0e0e0a5]", "fixed", "left-0", "top-0"]
+  classList: ["w-full", "h-screen", "bg-[#e0e0e0bc]", "fixed", "left-0", "top-0"]
 };
 
 ;// ./src/modal/modal.js
@@ -9092,6 +9092,7 @@ const modalCreator = () => {
   form.append(buttonForm);
   appContainer.append(fade);
   appContainer.append(form);
+  form.addEventListener("submit", () => getDataFromForm(form));
 };
 /* harmony default export */ const modal = (modalCreator);
 ;// ./src/btn-control/btn-control-params.js

@@ -1,4 +1,5 @@
 import creatorElement from "../utilites/creator.js";
+import { getDataFromForm } from "../utilites/data-handler.js";
 import {
     addBtnParams,
     buttonFormParams,
@@ -46,6 +47,8 @@ const modalCreator = () => {
     form.append(buttonForm);
     appContainer.append(fade);
     appContainer.append(form);
+
+    form.addEventListener("submit", (event) => getDataFromForm(form, event));
 };
 
 export default modalCreator;

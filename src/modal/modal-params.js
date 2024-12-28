@@ -37,6 +37,9 @@ const titleInputParams = {
         "max-w-[330px]",
         "w-full",
     ],
+    attr: {
+        name: "title",
+    },
 };
 
 const customCheckboxParams = {
@@ -54,6 +57,7 @@ const favoriteInputParams = {
     classList: ["real-checkbox"],
     attr: {
         type: "checkbox",
+        name: "checkbox",
     },
 };
 
@@ -68,6 +72,7 @@ const textareaParams = {
         "focus:shadow-lg",
         "mb-4",
     ],
+    attr: { name: "textarea" },
 };
 
 const buttonFormParams = {

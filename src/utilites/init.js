@@ -1,6 +1,6 @@
 import btnCreator from "../btn-control/btn-control-view.js";
 import headerCreator from "../header/header-viev.js";
-import initData from "./data-handler.js";
+import { initData } from "./data-handler.js";
 
 const init = () => {
     initData();
