@@ -48,7 +48,17 @@ const modalCreator = () => {
     appContainer.append(fade);
     appContainer.append(form);
 
-    form.addEventListener("submit", (event) => getDataFromForm(form, event));
+    form.addEventListener("submit", (event) => {
+        getDataFromForm(form, event);
+        removeModal(form, fade);
+    });
+
+    cancelBtn.addEventListener("click", () => removeModal(form, fade));
+};
+
+const removeModal = (modal, fade) => {
+    modal.remove();
+    fade.remove();
 };
 
 export default modalCreator;

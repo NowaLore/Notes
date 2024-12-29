@@ -9014,6 +9014,48 @@ const creatorElement = paramsElement => {
   return element;
 };
 /* harmony default export */ const creator = (creatorElement);
+;// ./src/utilites/data-handler.js
+const getDataFromForm = (formElement, event) => {
+  event.preventDefault();
+  const formData = new FormData(formElement);
+  const objNote = {
+    title: formData.get("title"),
+    textarea: formData.get("textarea"),
+    checkbox: formData.get("checkbox")
+  };
+  // 1. Прописать условие для помещения заметки в нужный массив
+  // 2. Отправить данные в локалку
+  // 3. Создать рендер заметок
+  if (objNote.checkbox) {
+    notes.favoriteNotes.push(objNote);
+  } else {
+    notes.regularNotes.push(objNote);
+  }
+  setDataToStorage(notes);
+};
+const setDataToStorage = data => {
+  const key = "notes";
+  const dataString = JSON.stringify(data);
+  localStorage.setItem(key, dataString);
+};
+const getDataFromStorage = () => {
+  const key = "notes";
+  const data = JSON.parse(localStorage.getItem(key));
+  return data;
+};
+const initData = () => {
+  let dataStructure = getDataFromStorage();
+  if (!dataStructure) {
+    dataStructure = {
+      regularNotes: [],
+      favoriteNotes: []
+    };
+  }
+  setDataToStorage(dataStructure);
+  return dataStructure;
+};
+const notes = initData();
+
 ;// ./src/modal/modal-params.js
 const formParams = {
   tagName: "form",
@@ -9025,7 +9067,10 @@ const headerFormParams = {
 };
 const titleInputParams = {
   tagName: "input",
-  classList: ["text-2xl", "font-medium", "outline-none", "max-w-[330px]", "w-full"]
+  classList: ["text-2xl", "font-medium", "outline-none", "max-w-[330px]", "w-full"],
+  attr: {
+    name: "title"
+  }
 };
 const customCheckboxParams = {
   tagName: "span",
@@ -9039,12 +9084,16 @@ const favoriteInputParams = {
   tagName: "input",
   classList: ["real-checkbox"],
   attr: {
-    type: "checkbox"
+    type: "checkbox",
+    name: "checkbox"
   }
 };
 const textareaParams = {
   tagName: "textarea",
-  classList: ["scrollbar", "w-full", "min-h-[200px]", "max-h-[450px]", "outline-none", "focus:shadow-lg", "mb-4"]
+  classList: ["scrollbar", "w-full", "min-h-[200px]", "max-h-[450px]", "outline-none", "focus:shadow-lg", "mb-4"],
+  attr: {
+    name: "textarea"
+  }
 };
 const buttonFormParams = {
   tagName: "div",
@@ -9066,6 +9115,7 @@ const fadeParams = {
 };
 
 ;// ./src/modal/modal.js
+
 
 
 const modalCreator = () => {
@@ -9092,7 +9142,7 @@ const modalCreator = () => {
   form.append(buttonForm);
   appContainer.append(fade);
   appContainer.append(form);
-  form.addEventListener("submit", () => getDataFromForm(form));
+  form.addEventListener("submit", event => getDataFromForm(form, event));
 };
 /* harmony default export */ const modal = (modalCreator);
 ;// ./src/btn-control/btn-control-params.js
@@ -9166,39 +9216,12 @@ const headerCreator = () => {
   return header;
 };
 /* harmony default export */ const header_viev = (headerCreator);
-;// ./src/utilites/data-handler.js
-const setDataToStorage = data => {
-  const key = "notes";
-  const dataString = JSON.stringify(data);
-  localStorage.setItem(key, dataString);
-};
-const getDataFromStorage = () => {
-  const key = "notes";
-  const data = JSON.parse(localStorage.getItem(key));
-  return data;
-};
-const initData = () => {
-  let dataStructure = getDataFromStorage();
-  if (!dataStructure) {
-    dataStructure = {
-      regularNotes: [],
-      favoriteNotes: []
-    };
-  }
-  setDataToStorage(dataStructure);
-  return dataStructure;
-};
-
-// const notes = initData();
-// console.log(notes);
-
-/* harmony default export */ const data_handler = (initData);
 ;// ./src/utilites/init.js
 
 
 
 const init = () => {
-  data_handler();
+  initData();
   const appContainer = document.body;
   const headerElement = header_viev();
   const wrapperControl = btn_control_view();
