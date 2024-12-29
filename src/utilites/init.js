@@ -1,6 +1,7 @@
 import btnCreator from "../btn-control/btn-control-view.js";
 import headerCreator from "../header/header-viev.js";
-import { initData } from "./data-handler.js";
+import { initData, notes } from "./data-handler.js";
+import renderNotes from "./render-notes.js";
 
 const init = () => {
     initData();
@@ -15,8 +16,9 @@ const init = () => {
 
     appContainer.append(headerElement);
     appContainer.append(wrapperControl);
+
+    renderNotes(notes.favoriteNotes);
+    renderNotes(notes.regularNotes);
 };
 
 export default init;
-
-// Вынести прослушку в файл кнопки или хедера

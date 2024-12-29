@@ -45,4 +45,4 @@ const initData = () => {
 
 const notes = initData();
 
-export { initData, getDataFromForm };
+export { initData, getDataFromForm, notes };

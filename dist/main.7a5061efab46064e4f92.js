@@ -9023,9 +9023,7 @@ const getDataFromForm = (formElement, event) => {
     textarea: formData.get("textarea"),
     checkbox: formData.get("checkbox")
   };
-  // 1. Прописать условие для помещения заметки в нужный массив
-  // 2. Отправить данные в локалку
-  // 3. Создать рендер заметок
+  // 1. Создать рендер заметок
   if (objNote.checkbox) {
     notes.favoriteNotes.push(objNote);
   } else {
@@ -9056,6 +9054,29 @@ const initData = () => {
 };
 const notes = initData();
 
+;// ./src/notes/notes-params.js
+const listNotesParams = {
+  tagName: "ul",
+  classList: ["max-w-4xl", "mx-auto"],
+  attr: {
+    id: "listNotes"
+  }
+};
+
+;// ./src/utilites/render-notes.js
+
+
+const renderNotes = arrayNotes => {
+  const appContainer = document.body;
+  let listNotes = appContainer.querySelector("#listnotes");
+  if (!listNotes) {
+    listNotes = creator(listNotesParams);
+    appContainer.append(listNotes);
+  } else {
+    console.log(arrayNotes);
+  }
+};
+/* harmony default export */ const render_notes = (renderNotes);
 ;// ./src/modal/modal-params.js
 const formParams = {
   tagName: "form",
@@ -9118,6 +9139,7 @@ const fadeParams = {
 
 
 
+
 const modalCreator = () => {
   const appContainer = document.body;
   const form = creator(formParams);
@@ -9142,7 +9164,17 @@ const modalCreator = () => {
   form.append(buttonForm);
   appContainer.append(fade);
   appContainer.append(form);
-  form.addEventListener("submit", event => getDataFromForm(form, event));
+  form.addEventListener("submit", event => {
+    getDataFromForm(form, event);
+    render_notes(notes.favoriteNotes);
+    render_notes(notes.regularNotes);
+    removeModal(form, fade);
+  });
+  cancelBtn.addEventListener("click", () => removeModal(form, fade));
+};
+const removeModal = (modal, fade) => {
+  modal.remove();
+  fade.remove();
 };
 /* harmony default export */ const modal = (modalCreator);
 ;// ./src/btn-control/btn-control-params.js
@@ -9220,6 +9252,7 @@ const headerCreator = () => {
 
 
 
+
 const init = () => {
   initData();
   const appContainer = document.body;
@@ -9231,6 +9264,8 @@ const init = () => {
   });
   appContainer.append(headerElement);
   appContainer.append(wrapperControl);
+  render_notes(notes.favoriteNotes);
+  render_notes(notes.regularNotes);
 };
 /* harmony default export */ const utilites_init = (init);
 
