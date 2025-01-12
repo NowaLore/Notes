@@ -3,9 +3,11 @@ import creatorElement from "./creator.js";
 // Убрать создание второго списка
 const renderNotes = (arrayNotes) => {
     const appContainer = document.body;
-    let listNotes = appContainer.querySelector("#listnotes");
+    console.log(appContainer);
+    let listNotes = appContainer.querySelector("#listNotes");
     if (!listNotes) {
         listNotes = creatorElement(listNotesParams);
+
         appContainer.append(listNotes);
     } else {
         console.log(arrayNotes);

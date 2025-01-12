@@ -9066,14 +9066,16 @@ const listNotesParams = {
 ;// ./src/utilites/render-notes.js
 
 
+// Убрать создание второго списка
 const renderNotes = arrayNotes => {
   const appContainer = document.body;
   let listNotes = appContainer.querySelector("#listnotes");
   if (!listNotes) {
     listNotes = creator(listNotesParams);
+    console.log(listNotes);
     appContainer.append(listNotes);
   } else {
-    console.log(arrayNotes);
+    console.log(listNotes);
   }
 };
 /* harmony default export */ const render_notes = (renderNotes);
@@ -9268,8 +9270,6 @@ const init = () => {
   render_notes(notes.regularNotes);
 };
 /* harmony default export */ const utilites_init = (init);
-
-// Вынести прослушку в файл кнопки или хедера
 ;// ./src/index.js
 
 
