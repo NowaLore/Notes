@@ -9062,6 +9062,50 @@ const listNotesParams = {
     id: "listNotes"
   }
 };
+const itemParams = {
+  tagName: "li",
+  classList: []
+};
+const noteParams = {
+  tagName: "article",
+  classList: []
+};
+const topNoteParams = {
+  tagName: "div",
+  classList: []
+};
+const wrapperTitleParams = {
+  tagName: "div",
+  classList: []
+};
+const noteTitleParams = {
+  tagName: "h2",
+  classList: []
+};
+const dateParams = {
+  tagName: "span",
+  classList: []
+};
+const btnWrapperParams = {
+  tagName: "div",
+  classList: []
+};
+const btnStatusParams = {
+  tagName: "button",
+  classList: []
+};
+const btnEditParams = {
+  tagName: "button",
+  classList: []
+};
+const btnDeleteParams = {
+  tagName: "button",
+  classList: []
+};
+const bottomNoteParams = {
+  tagName: "p",
+  classList: []
+};
 
 ;// ./src/utilites/render-notes.js
 
@@ -9069,14 +9113,36 @@ const listNotesParams = {
 // Убрать создание второго списка
 const renderNotes = arrayNotes => {
   const appContainer = document.body;
-  let listNotes = appContainer.querySelector("#listnotes");
+  let listNotes = appContainer.querySelector("#listNotes");
   if (!listNotes) {
     listNotes = creator(listNotesParams);
-    console.log(listNotes);
     appContainer.append(listNotes);
-  } else {
-    console.log(listNotes);
   }
+  arrayNotes.forEach(element => {
+    const item = creator(itemParams);
+    const article = creator(noteParams);
+    item.append(article);
+    const top = creator(topNoteParams);
+    article.append(top);
+    const wrapperTitle = creator(wrapperTitleParams);
+    top.append(wrapperTitle);
+    const title = creator(noteTitleParams);
+    title.innerText = element.title;
+    wrapperTitle.append(title);
+    const date = creator(dateParams);
+    wrapperTitle.append(date);
+    const btnWrapper = creator(btnWrapperParams);
+    top.append(btnWrapper);
+    const btnStatus = creator(btnStatusParams);
+    btnWrapper.append(btnStatus);
+    const btnEdit = creator(btnEditParams);
+    btnWrapper.append(btnEdit);
+    const btnDel = creator(btnDeleteParams);
+    btnWrapper.append(btnDel);
+    const bottomNote = creator(bottomNoteParams);
+    article.append(bottomNote);
+    listNotes.append(item);
+  });
 };
 /* harmony default export */ const render_notes = (renderNotes);
 ;// ./src/modal/modal-params.js

@@ -6,4 +6,72 @@ const listNotesParams = {
     },
 };
 
-export { listNotesParams };
+const itemParams = {
+    tagName: "li",
+    classList: [],
+};
+
+const noteParams = {
+    tagName: "article",
+    classList: [],
+};
+
+const topNoteParams = {
+    tagName: "div",
+    classList: [],
+};
+
+const wrapperTitleParams = {
+    tagName: "div",
+    classList: [],
+};
+
+const noteTitleParams = {
+    tagName: "h2",
+    classList: [],
+};
+
+const dateParams = {
+    tagName: "span",
+    classList: [],
+};
+
+const btnWrapperParams = {
+    tagName: "div",
+    classList: [],
+};
+
+const btnStatusParams = {
+    tagName: "button",
+    classList: [],
+};
+
+const btnEditParams = {
+    tagName: "button",
+    classList: [],
+};
+
+const btnDeleteParams = {
+    tagName: "button",
+    classList: [],
+};
+
+const bottomNoteParams = {
+    tagName: "p",
+    classList: [],
+};
+
+export {
+    listNotesParams,
+    itemParams,
+    noteParams,
+    topNoteParams,
+    bottomNoteParams,
+    noteTitleParams,
+    dateParams,
+    btnStatusParams,
+    btnEditParams,
+    btnDeleteParams,
+    wrapperTitleParams,
+    btnWrapperParams,
+};
