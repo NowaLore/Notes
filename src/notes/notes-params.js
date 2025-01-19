@@ -1,6 +1,6 @@
 const listNotesParams = {
     tagName: "ul",
-    classList: ["max-w-4xl", "mx-auto"],
+    classList: ["max-w-4xl", "mx-auto", "max-h-[600px]", "overflow-y-auto,"],
     attr: {
         id: "listNotes",
     },
@@ -13,22 +13,22 @@ const itemParams = {
 
 const noteParams = {
     tagName: "article",
-    classList: [],
+    classList: ["border-2", "border-cyan-600", "rounded-xl", "mb-4", "p-2"],
 };
 
 const topNoteParams = {
     tagName: "div",
-    classList: [],
+    classList: ["flex", "justify-between"],
 };
 
 const wrapperTitleParams = {
     tagName: "div",
-    classList: [],
+    classList: ["flex", "gap-4"],
 };
 
 const noteTitleParams = {
     tagName: "h2",
-    classList: [],
+    classList: ["font-medium", "text-2xl", "text-cyan-600"],
 };
 
 const dateParams = {
@@ -38,22 +38,22 @@ const dateParams = {
 
 const btnWrapperParams = {
     tagName: "div",
-    classList: [],
+    classList: ["flex", "gap-2"],
 };
 
 const btnStatusParams = {
     tagName: "button",
-    classList: [],
+    classList: ["w-6", "h-6"],
 };
 
 const btnEditParams = {
     tagName: "button",
-    classList: [],
+    classList: ["w-6", "h-6"],
 };
 
 const btnDeleteParams = {
     tagName: "button",
-    classList: [],
+    classList: ["w-6", "h-6"],
 };
 
 const bottomNoteParams = {
