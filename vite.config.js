@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import clean from "vite-plugin-clean";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
     base: "./",
@@ -8,9 +8,7 @@ export default defineConfig({
         sourcemap: true,
     },
     plugins: [
-        clean({
-        targets: ["../dist"],
-        }),
+        tailwindcss(),
     ],
     css: {
         minify: false,
