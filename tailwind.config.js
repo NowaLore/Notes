@@ -5,10 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: 15,
-    },
     extend: {
       screens: {
         'can-hover': {'raw': '(hover: hover)'},

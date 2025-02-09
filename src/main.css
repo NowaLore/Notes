@@ -1,38 +1,34 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-body {
-    /* background-color: #189ab4; */
-}
-
 body.dark {
     background-color: #2f353b;
 }
 
 .icon-wrapper {
-    background-image: url(./img/sun-icon.svtailg);
+    background-image: url(./sun-icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 body.dark .icon-wrapper {
-    background-image: url(./img/sun-icon-dark.svg);
+    background-image: url(./sun-icon-dark.svg);
 }
 
 .icon-addnote {
-    background-image: url(./img/btn-add-note__icon.svg);
+    background-image: url(./btn-add-note__icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 body.dark .icon-addnote {
-    background-image: url(./img/btn-add-note__icon-dark.svg);
+    background-image: url(./btn-add-note__icon-dark.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .custom-checkbox {
-    background-image: url(./img/star-btn.svg);
+    background-image: url(./star-btn.svg);
     background-size: cover;
     background-repeat: no-repeat;
     display: inline-block;
@@ -49,7 +45,7 @@ body.dark .icon-addnote {
 }
 
 .real-checkbox:checked + .custom-checkbox {
-    background-image: url(./img/star-btn-gold.svg);
+    background-image: url(./star-btn_gold.svg);
 }
 
 .scrollbar::-webkit-scrollbar {

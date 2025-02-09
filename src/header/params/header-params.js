@@ -7,7 +7,9 @@ const headerParams = {
         "py-2.5",
         "flex",
         "justify-between",
-        "container",
+        "mx-auto",
+        "max-w-[1024px]",
+        "px-[15px]",
         "dark:border-white",
     ],
 };
@@ -17,7 +19,7 @@ const titleParams = {
     classList: [
         "text-3xl",
         "font-medium",
-        "font-['Roboto_Slab']",
+        "font-[Roboto_Slab]",
         "text-cyan-600",
         "dark:text-white",
     ],
