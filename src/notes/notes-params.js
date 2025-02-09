@@ -43,17 +43,22 @@ const btnWrapperParams = {
 
 const btnStatusParams = {
     tagName: "button",
-    classList: ["w-6", "h-6"],
+    classList: ["w-6", "h-6", "bg-[url(./star-btn.svg)]"],
+};
+
+const btnStatusGoldParams = {
+    tagName: "button",
+    classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]"],
 };
 
 const btnEditParams = {
     tagName: "button",
-    classList: ["w-6", "h-6"],
+    classList: ["w-6", "h-6", "bg-[url(./edit-btn.svg)]"],
 };
 
 const btnDeleteParams = {
     tagName: "button",
-    classList: ["w-6", "h-6"],
+    classList: ["w-6", "h-6", "bg-[url(./trash-btn.svg)]"],
 };
 
 const bottomNoteParams = {
@@ -70,6 +75,7 @@ export {
     noteTitleParams,
     dateParams,
     btnStatusParams,
+    btnStatusGoldParams,
     btnEditParams,
     btnDeleteParams,
     wrapperTitleParams,

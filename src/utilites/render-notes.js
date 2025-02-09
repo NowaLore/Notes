@@ -2,6 +2,7 @@ import {
     bottomNoteParams,
     btnDeleteParams,
     btnEditParams,
+    btnStatusGoldParams,
     btnStatusParams,
     btnWrapperParams,
     dateParams,
@@ -13,7 +14,7 @@ import {
     wrapperTitleParams,
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
-// Убрать создание второго списка
+
 const renderNotes = (arrayNotes) => {
     const appContainer = document.body;
     let listNotes = appContainer.querySelector("#listNotes");
@@ -23,6 +24,8 @@ const renderNotes = (arrayNotes) => {
     }
 
     arrayNotes.forEach((element) => {
+        console.log(element);
+
         const item = creatorElement(itemParams);
 
         const article = creatorElement(noteParams);
@@ -44,8 +47,13 @@ const renderNotes = (arrayNotes) => {
         const btnWrapper = creatorElement(btnWrapperParams);
         top.append(btnWrapper);
 
-        const btnStatus = creatorElement(btnStatusParams);
-        btnWrapper.append(btnStatus);
+        if (element.checkbox) {
+            const btnStatusGold = creatorElement(btnStatusGoldParams);
+            btnWrapper.append(btnStatusGold);
+        } else {
+            const btnStatus = creatorElement(btnStatusParams);
+            btnWrapper.append(btnStatus);
+        }
 
         const btnEdit = creatorElement(btnEditParams);
         btnWrapper.append(btnEdit);
