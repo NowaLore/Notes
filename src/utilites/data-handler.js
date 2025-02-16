@@ -5,8 +5,8 @@ const getDataFromForm = (formElement, event) => {
         title: formData.get("title"),
         textarea: formData.get("textarea"),
         checkbox: formData.get("checkbox"),
+        date: setDate(),
     };
-    // 1. Создать рендер заметок
     if (objNote.checkbox) {
         notes.favoriteNotes.push(objNote);
     } else {
@@ -14,6 +14,22 @@ const getDataFromForm = (formElement, event) => {
     }
 
     setDataToStorage(notes);
+};
+
+const setDate = () => {
+    const currentDate = new Date();
+    const neededDate = {
+        date: currentDate.toLocaleTimeString("ru", {
+            hour: "2-digit",
+            minute: "2-digit",
+        }),
+        time: currentDate.toLocaleDateString("ru", {
+            year: "numeric",
+            month: "numeric",
+            day: "numeric",
+        }),
+    };
+    return neededDate;
 };
 
 const setDataToStorage = (data) => {

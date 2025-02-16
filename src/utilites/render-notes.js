@@ -42,6 +42,8 @@ const renderNotes = (arrayNotes) => {
         wrapperTitle.append(title);
 
         const date = creatorElement(dateParams);
+        // дз тут выполнять окда
+
         wrapperTitle.append(date);
 
         const btnWrapper = creatorElement(btnWrapperParams);

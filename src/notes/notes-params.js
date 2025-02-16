@@ -1,6 +1,6 @@
 const listNotesParams = {
     tagName: "ul",
-    classList: ["max-w-4xl", "mx-auto", "max-h-[600px]", "overflow-y-auto,"],
+    classList: ["max-w-4xl", "mx-auto", "max-h-[600px]", "overflow-y-auto"],
     attr: {
         id: "listNotes",
     },
@@ -63,7 +63,7 @@ const btnDeleteParams = {
 
 const bottomNoteParams = {
     tagName: "p",
-    classList: [],
+    classList: ["text-neutral-400", "truncate"],
 };
 
 export {

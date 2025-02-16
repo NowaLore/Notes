@@ -1,6 +1,6 @@
 const addNoteParams = {
     tagName: "button",
-    classList: ["flex", "items-center", "gap-2", "mx-auto", "mt-10"],
+    classList: ["flex", "items-center", "gap-2", "mx-auto", "mt-10", "mb-8"],
 };
 
 const addNoteTextParams = {
