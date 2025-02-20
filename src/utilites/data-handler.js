@@ -19,11 +19,11 @@ const getDataFromForm = (formElement, event) => {
 const setDate = () => {
     const currentDate = new Date();
     const neededDate = {
-        date: currentDate.toLocaleTimeString("ru", {
+        time: currentDate.toLocaleTimeString("ru", {
             hour: "2-digit",
             minute: "2-digit",
         }),
-        time: currentDate.toLocaleDateString("ru", {
+        date: currentDate.toLocaleDateString("ru", {
             year: "numeric",
             month: "numeric",
             day: "numeric",

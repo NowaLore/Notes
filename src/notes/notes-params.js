@@ -18,12 +18,12 @@ const noteParams = {
 
 const topNoteParams = {
     tagName: "div",
-    classList: ["flex", "justify-between"],
+    classList: ["flex", "justify-between", "mb-[8px]"],
 };
 
 const wrapperTitleParams = {
     tagName: "div",
-    classList: ["flex", "gap-4"],
+    classList: ["flex", "gap-4", "items-center"],
 };
 
 const noteTitleParams = {
@@ -33,7 +33,7 @@ const noteTitleParams = {
 
 const dateParams = {
     tagName: "span",
-    classList: [],
+    classList: ["text-sm", "text-stone-400"],
 };
 
 const btnWrapperParams = {
@@ -63,7 +63,7 @@ const btnDeleteParams = {
 
 const bottomNoteParams = {
     tagName: "p",
-    classList: ["text-neutral-400", "truncate"],
+    classList: ["text-neutral-600", "truncate"],
 };
 
 export {

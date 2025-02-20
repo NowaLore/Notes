@@ -16,6 +16,8 @@ import {
 import creatorElement from "./creator.js";
 
 const renderNotes = (arrayNotes) => {
+    console.log(arrayNotes);
+
     const appContainer = document.body;
     let listNotes = appContainer.querySelector("#listNotes");
     if (!listNotes) {
@@ -42,7 +44,8 @@ const renderNotes = (arrayNotes) => {
         wrapperTitle.append(title);
 
         const date = creatorElement(dateParams);
-        // дз тут выполнять окда
+        const dateString = `Created ${element.date.date} in ${element.date.time}`;
+        date.innerText = dateString;
 
         wrapperTitle.append(date);
 
