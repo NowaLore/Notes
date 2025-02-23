@@ -15,6 +15,10 @@ import {
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
 
+const clearRender = (element) => {
+    element.innerHTML = "";
+};
+
 const renderNotes = (arrayNotes) => {
     const appContainer = document.body;
     let listNotes = appContainer.querySelector("#listNotes");
@@ -22,6 +26,8 @@ const renderNotes = (arrayNotes) => {
         listNotes = creatorElement(listNotesParams);
         appContainer.append(listNotes);
     }
+
+    clearRender(listNotes);
 
     arrayNotes.forEach((element) => {
         const item = creatorElement(itemParams);
