@@ -16,8 +16,6 @@ import {
 import creatorElement from "./creator.js";
 
 const renderNotes = (arrayNotes) => {
-    console.log(arrayNotes);
-
     const appContainer = document.body;
     let listNotes = appContainer.querySelector("#listNotes");
     if (!listNotes) {
@@ -26,8 +24,6 @@ const renderNotes = (arrayNotes) => {
     }
 
     arrayNotes.forEach((element) => {
-        console.log(element);
-
         const item = creatorElement(itemParams);
 
         const article = creatorElement(noteParams);
@@ -75,3 +71,6 @@ const renderNotes = (arrayNotes) => {
 };
 
 export default renderNotes;
+// 1. Отследить клик по списку
+// 2. При клике получиьь айди заметки
+// 3. Вызвать удаление из data-handler

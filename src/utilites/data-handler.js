@@ -1,11 +1,13 @@
 const getDataFromForm = (formElement, event) => {
     event.preventDefault();
     const formData = new FormData(formElement);
+    const isFavorite = formData.get("checkbox");
     const objNote = {
         title: formData.get("title"),
         textarea: formData.get("textarea"),
         checkbox: formData.get("checkbox"),
         date: setDate(),
+        id: setID(isFavorite),
     };
     if (objNote.checkbox) {
         notes.favoriteNotes.push(objNote);
@@ -14,6 +16,17 @@ const getDataFromForm = (formElement, event) => {
     }
 
     setDataToStorage(notes);
+};
+
+const setID = (status) => {
+    console.log(status);
+    let newID = null;
+    if (status) {
+        newID = `${notes.favoriteNotes.length}favorite`;
+    } else {
+        newID = `${notes.regularNotes.length}regular`;
+    }
+    return newID;
 };
 
 const setDate = () => {
@@ -62,3 +75,6 @@ const initData = () => {
 const notes = initData();
 
 export { initData, getDataFromForm, notes };
+// 1. Написать функцию удаления
+// 2. Функция принимает айди
+// 3.
