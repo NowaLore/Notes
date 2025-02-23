@@ -15,6 +15,10 @@ import {
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
 
+const eventHandler = (event) => {
+    console.log(event);
+};
+
 const clearRender = (element) => {
     element.innerHTML = "";
 };
@@ -25,6 +29,7 @@ const renderNotes = (arrayNotes) => {
     if (!listNotes) {
         listNotes = creatorElement(listNotesParams);
         appContainer.append(listNotes);
+        listNotes.addEventListener("click", (event) => eventHandler(event));
     }
 
     clearRender(listNotes);

@@ -59,6 +59,9 @@ const btnEditParams = {
 const btnDeleteParams = {
     tagName: "button",
     classList: ["w-6", "h-6", "bg-[url(./trash-btn.svg)]"],
+    attr: {
+        "data-del": "",
+    },
 };
 
 const bottomNoteParams = {
