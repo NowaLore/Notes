@@ -1,6 +1,6 @@
 import creatorElement from "../utilites/creator.js";
 import { getDataFromForm, notes } from "../utilites/data-handler.js";
-import renderNotes from "../utilites/render-notes.js";
+import renderNotes, { clearRender } from "../utilites/render-notes.js";
 import {
     addBtnParams,
     buttonFormParams,
@@ -52,6 +52,7 @@ const modalCreator = () => {
     form.addEventListener("submit", (event) => {
         getDataFromForm(form, event);
 
+        clearRender();
         renderNotes(notes.favoriteNotes);
         renderNotes(notes.regularNotes);
         removeModal(form, fade);

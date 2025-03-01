@@ -72,9 +72,15 @@ const initData = () => {
     return dataStructure;
 };
 
+const removeNote = (currentID) => {
+    if (currentID.endsWith("regular")) {
+        console.log(1);
+    }
+};
+
 const notes = initData();
 
-export { initData, getDataFromForm, notes };
+export { initData, removeNote, getDataFromForm, notes };
 // 1. Написать функцию удаления
 // 2. Функция принимает айди
 // 3.

@@ -14,18 +14,18 @@ import {
     wrapperTitleParams,
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
+import { removeNote } from "./data-handler.js";
 
 const eventHandler = (event) => {
     const isRemoveBtn = event.target.closest("[data-del]");
     if (isRemoveBtn) {
-        console.log(isRemoveBtn);
         const currID = isRemoveBtn.closest("[data-item]").id;
-        console.log(currID);
+        removeNote(currID);
     }
 };
 
-const clearRender = (element) => {
-    element.innerHTML = "";
+const clearRender = () => {
+    document.querySelector("#listNotes").innerHTML = "";
 };
 
 const renderNotes = (arrayNotes) => {
@@ -36,8 +36,6 @@ const renderNotes = (arrayNotes) => {
         appContainer.append(listNotes);
         listNotes.addEventListener("click", (event) => eventHandler(event));
     }
-
-    clearRender(listNotes);
 
     arrayNotes.forEach((element) => {
         const item = creatorElement(itemParams);
@@ -89,6 +87,7 @@ const renderNotes = (arrayNotes) => {
 };
 
 export default renderNotes;
+export { clearRender };
 // 1. Отследить клик по списку
 // 2. При клике получиьь айди заметки
 // 3. Вызвать удаление из data-handler
