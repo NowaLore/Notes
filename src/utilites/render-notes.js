@@ -16,7 +16,12 @@ import {
 import creatorElement from "./creator.js";
 
 const eventHandler = (event) => {
-    console.log(event);
+    const isRemoveBtn = event.target.closest("[data-del]");
+    if (isRemoveBtn) {
+        console.log(isRemoveBtn);
+        const currID = isRemoveBtn.closest("[data-item]").id;
+        console.log(currID);
+    }
 };
 
 const clearRender = (element) => {
@@ -36,6 +41,8 @@ const renderNotes = (arrayNotes) => {
 
     arrayNotes.forEach((element) => {
         const item = creatorElement(itemParams);
+        item.setAttribute("id", element.id);
+        item.setAttribute("data-item", "");
 
         const article = creatorElement(noteParams);
         item.append(article);
