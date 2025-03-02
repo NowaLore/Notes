@@ -14,13 +14,16 @@ import {
     wrapperTitleParams,
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
-import { removeNote } from "./data-handler.js";
+import { notes, removeNote } from "./data-handler.js";
 
 const eventHandler = (event) => {
     const isRemoveBtn = event.target.closest("[data-del]");
     if (isRemoveBtn) {
         const currID = isRemoveBtn.closest("[data-item]").id;
         removeNote(currID);
+        clearRender();
+        renderNotes(notes.favoriteNotes);
+        renderNotes(notes.regularNotes);
     }
 };
 
