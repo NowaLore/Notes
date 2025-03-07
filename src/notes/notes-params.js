@@ -54,6 +54,9 @@ const btnStatusGoldParams = {
 const btnEditParams = {
     tagName: "button",
     classList: ["w-6", "h-6", "bg-[url(./edit-btn.svg)]"],
+    attr: {
+        "data-edit": "",
+    },
 };
 
 const btnDeleteParams = {

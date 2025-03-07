@@ -1,3 +1,4 @@
+import modalCreator from "../modal/modal.js";
 import {
     bottomNoteParams,
     btnDeleteParams,
@@ -18,12 +19,16 @@ import { notes, removeNote } from "./data-handler.js";
 
 const eventHandler = (event) => {
     const isRemoveBtn = event.target.closest("[data-del]");
+    const isEditBtn = event.target.closest("[data-edit]");
     if (isRemoveBtn) {
         const currID = isRemoveBtn.closest("[data-item]").id;
         removeNote(currID);
         clearRender();
         renderNotes(notes.favoriteNotes);
         renderNotes(notes.regularNotes);
+    }
+    if (isEditBtn) {
+        modalCreator();
     }
 };
 

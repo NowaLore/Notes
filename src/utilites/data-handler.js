@@ -97,6 +97,18 @@ const decreaseID = (currIndex, currArray, statusNote) => {
     }
 };
 
+// const findNote = (id) => {
+// // Дз делать здесь
+// console.log(id);
+
+// }
+
 const notes = initData();
 
 export { initData, removeNote, getDataFromForm, notes };
+
+// 1. Отследить клик по кнопке карандаша
+// 2. Открывать модальное окно
+// 3. Написать функцию поиска заметки
+// 4. Данные из заметки подставить в форму
+// 5. Если данные подставленны в форму заменить кнопу Add на Edit
