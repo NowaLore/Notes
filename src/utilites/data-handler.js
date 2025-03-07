@@ -74,20 +74,29 @@ const initData = () => {
 
 const removeNote = (currentID) => {
     let currArray = null;
+    let statusNote = "";
     if (currentID.endsWith("regular")) {
         currArray = notes.regularNotes;
+        statusNote = "regular";
     } else if (currentID.endsWith("favorite")) {
         currArray = notes.favoriteNotes;
+        statusNote = "favorite";
     }
 
     const currIndex = currArray.findIndex((note) => note.id === currentID);
     currArray.splice(currIndex, 1);
+    decreaseID(currIndex, currArray, statusNote);
     setDataToStorage(notes);
+};
+
+const decreaseID = (currIndex, currArray, statusNote) => {
+    for (let i = currIndex; i < currArray.length; i++) {
+        const currID = parseInt(currArray[i].id);
+        const updID = currID - 1;
+        currArray[i].id = updID + statusNote;
+    }
 };
 
 const notes = initData();
 
 export { initData, removeNote, getDataFromForm, notes };
-// 1. Написать функцию удаления
-// 2. Функция принимает айди
-//
