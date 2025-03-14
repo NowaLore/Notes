@@ -15,11 +15,12 @@ import {
     wrapperTitleParams,
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
-import { notes, removeNote } from "./data-handler.js";
+import { findNote, notes, removeNote } from "./data-handler.js";
 
 const eventHandler = (event) => {
     const isRemoveBtn = event.target.closest("[data-del]");
     const isEditBtn = event.target.closest("[data-edit]");
+
     if (isRemoveBtn) {
         const currID = isRemoveBtn.closest("[data-item]").id;
         removeNote(currID);
@@ -28,7 +29,8 @@ const eventHandler = (event) => {
         renderNotes(notes.regularNotes);
     }
     if (isEditBtn) {
-        modalCreator();
+        const currID = isEditBtn.closest("[data-item]").id;
+        modalCreator(findNote(currID));
     }
 };
 

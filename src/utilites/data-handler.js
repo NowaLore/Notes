@@ -19,7 +19,6 @@ const getDataFromForm = (formElement, event) => {
 };
 
 const setID = (status) => {
-    console.log(status);
     let newID = null;
     if (status) {
         newID = `${notes.favoriteNotes.length}favorite`;
@@ -97,18 +96,26 @@ const decreaseID = (currIndex, currArray, statusNote) => {
     }
 };
 
-// const findNote = (id) => {
-// // Дз делать здесь
-// console.log(id);
-
-// }
+const findNote = (currentID) => {
+    let currArray = null;
+    if (currentID.endsWith("regular")) {
+        currArray = notes.regularNotes;
+    } else if (currentID.endsWith("favorite")) {
+        currArray = notes.favoriteNotes;
+    }
+    for (let i = 0; i < currArray.length; i++) {
+        if (currArray[i].id === currentID) {
+            return currArray[i];
+        }
+    }
+};
 
 const notes = initData();
 
-export { initData, removeNote, getDataFromForm, notes };
+export { findNote, initData, removeNote, getDataFromForm, notes };
 
-// 1. Отследить клик по кнопке карандаша
-// 2. Открывать модальное окно
-// 3. Написать функцию поиска заметки
+// 1. Отследить клик по кнопке карандаша+
+// 2. Открывать модальное окно+
+// 3. Написать функцию поиска заметки+
 // 4. Данные из заметки подставить в форму
 // 5. Если данные подставленны в форму заменить кнопу Add на Edit

@@ -1,6 +1,13 @@
 const listNotesParams = {
     tagName: "ul",
-    classList: ["max-w-4xl", "mx-auto", "max-h-[600px]", "overflow-y-auto"],
+    classList: [
+        "listScroll",
+        "max-w-4xl",
+        "mx-auto",
+        "max-h-[600px]",
+        "overflow-y-auto",
+        "pr-4",
+    ],
     attr: {
         id: "listNotes",
     },
