@@ -30,14 +30,15 @@ const modalCreator = (objectNote = {}) => {
     }
 
     const isFavorite = objectNote.checkbox;
+    console.log(objectNote);
 
     if (isFavorite) {
-        favoriteInputParams.attr.checked = isFavorite;
+        favoriteInputParams.attr.checked = "checked";
         console.log(favoriteInputParams);
 
         console.log(objectNote.checkbox);
     } else {
-        favoriteInputParams.attr.checked;
+        delete favoriteInputParams.attr.checked;
         console.log(favoriteInputParams);
     }
 
