@@ -16,8 +16,6 @@ import {
 } from "./modal-params.js";
 
 const modalCreator = (objectNote = {}) => {
-    console.log(objectNote);
-
     const appContainer = document.body;
     const form = creatorElement(formParams);
     const headerForm = creatorElement(headerFormParams);
@@ -27,6 +25,20 @@ const modalCreator = (objectNote = {}) => {
 
     if (objectNote.title) {
         titleInputParams.attr.value = objectNote.title;
+    } else {
+        titleInputParams.attr.value = "";
+    }
+
+    const isFavorite = objectNote.checkbox;
+
+    if (isFavorite) {
+        favoriteInputParams.attr.checked = isFavorite;
+        console.log(favoriteInputParams);
+
+        console.log(objectNote.checkbox);
+    } else {
+        favoriteInputParams.attr.checked;
+        console.log(favoriteInputParams);
     }
 
     const titleInput = creatorElement(titleInputParams);
@@ -42,10 +54,9 @@ const modalCreator = (objectNote = {}) => {
     headerForm.append(label);
 
     if (objectNote.textarea) {
-        console.log(objectNote.textarea);
-        // Починить отображение текста в textarea при изменении заметки
-        textareaParams.attr.text = objectNote.textarea;
-        console.log(textareaParams);
+        textareaParams.text = objectNote.textarea;
+    } else {
+        textareaParams.text = "";
     }
 
     const textarea = creatorElement(textareaParams);
