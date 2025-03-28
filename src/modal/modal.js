@@ -30,16 +30,11 @@ const modalCreator = (objectNote = {}) => {
     }
 
     const isFavorite = objectNote.checkbox;
-    console.log(objectNote);
 
     if (isFavorite) {
         favoriteInputParams.attr.checked = "checked";
-        console.log(favoriteInputParams);
-
-        console.log(objectNote.checkbox);
     } else {
         delete favoriteInputParams.attr.checked;
-        console.log(favoriteInputParams);
     }
 
     const titleInput = creatorElement(titleInputParams);
@@ -66,6 +61,14 @@ const modalCreator = (objectNote = {}) => {
 
     const buttonForm = creatorElement(buttonFormParams);
     const cancelBtn = creatorElement(cancelBtnParams);
+
+    if (Object.keys(objectNote).length > 0 && !(objectNote instanceof Event)) {
+        addBtnParams.text = "Edit";
+    } else {
+        addBtnParams.text = "Add";
+    }
+    console.log(objectNote);
+
     const addBtn = creatorElement(addBtnParams);
 
     buttonForm.append(cancelBtn);
