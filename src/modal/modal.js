@@ -18,6 +18,10 @@ import {
 const modalCreator = (objectNote = {}) => {
     const appContainer = document.body;
     const form = creatorElement(formParams);
+
+    if (objectNote.id) {
+        form.setAttribute("data-noteid", objectNote.id);
+    }
     const headerForm = creatorElement(headerFormParams);
 
     form.append(headerForm);

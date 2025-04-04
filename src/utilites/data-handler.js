@@ -1,21 +1,35 @@
 const getDataFromForm = (formElement, event) => {
     event.preventDefault();
     const formData = new FormData(formElement);
-    const isFavorite = formData.get("checkbox");
+
     const objNote = {
         title: formData.get("title"),
         textarea: formData.get("textarea"),
         checkbox: formData.get("checkbox"),
-        date: setDate(),
-        id: setID(isFavorite),
+        date: "",
+        id: "",
     };
-    if (objNote.checkbox) {
-        notes.favoriteNotes.push(objNote);
-    } else {
-        notes.regularNotes.push(objNote);
+
+    const oldID = formElement.dataset.noteid;
+
+    if (oldID) {
+        const oldNote = findNote(oldID);
+        changeNote(objNote, oldNote);
+        return;
     }
 
+    objNote.id = setID(objNote.checkbox);
+    objNote.date = setDate();
+    setNoteToArray(objNote);
     setDataToStorage(notes);
+};
+
+const setNoteToArray = (objectNote) => {
+    if (objectNote.checkbox) {
+        notes.favoriteNotes.push(objectNote);
+    } else {
+        notes.regularNotes.push(objectNote);
+    }
 };
 
 const setID = (status) => {
@@ -110,12 +124,19 @@ const findNote = (currentID) => {
     }
 };
 
+const changeNote = (newNote, oldNote) => {
+    const titleChange = oldNote.title !== newNote.title;
+    const textareaChange = oldNote.textarea !== newNote.textarea;
+    const checkboxChange = oldNote.checkbox !== newNote.checkbox;
+    if (titleChange || textareaChange || checkboxChange) {
+        removeNote(oldNote.id);
+        newNote.id = setID(newNote.checkbox);
+        newNote.date = setDate();
+        setNoteToArray(newNote);
+        setDataToStorage(notes);
+    }
+};
+
 const notes = initData();
 
 export { findNote, initData, removeNote, getDataFromForm, notes };
-
-// 1. Отследить клик по кнопке карандаша+
-// 2. Открывать модальное окно+
-// 3. Написать функцию поиска заметки+
-// 4. Данные из заметки подставить в форму
-// 5. Если данные подставленны в форму заменить кнопу Add на Edit
