@@ -51,11 +51,17 @@ const btnWrapperParams = {
 const btnStatusParams = {
     tagName: "button",
     classList: ["w-6", "h-6", "bg-[url(./star-btn.svg)]"],
+    attr: {
+        "data-status": "",
+    },
 };
 
 const btnStatusGoldParams = {
     tagName: "button",
     classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]"],
+    attr: {
+        "data-status": "",
+    },
 };
 
 const btnEditParams = {

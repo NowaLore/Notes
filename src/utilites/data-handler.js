@@ -138,6 +138,10 @@ const changeNote = (newNote, oldNote) => {
     }
 };
 
+const changeStatus = (objNote) => {
+    console.log(objNote);
+};
+
 const notes = initData();
 
-export { findNote, initData, removeNote, getDataFromForm, notes };
+export { findNote, initData, removeNote, changeStatus, getDataFromForm, notes };
