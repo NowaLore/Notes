@@ -65,8 +65,9 @@ const renderNotes = (arrayNotes) => {
         title.innerText = element.title;
         wrapperTitle.append(title);
 
+        let isChanged = element.isChanged ? "Changed" : "Created";
         const date = creatorElement(dateParams);
-        const dateString = `Created ${element.date.date} in ${element.date.time}`;
+        const dateString = `${isChanged} ${element.date.date} in ${element.date.time}`;
         date.innerText = dateString;
 
         wrapperTitle.append(date);

@@ -132,6 +132,7 @@ const changeNote = (newNote, oldNote) => {
         removeNote(oldNote.id);
         newNote.id = setID(newNote.checkbox);
         newNote.date = setDate();
+        newNote.isChanged = true;
         setNoteToArray(newNote);
         setDataToStorage(notes);
     }
