@@ -51,4 +51,15 @@ const iconWrapperParams = {
     classList: ["icon-wrapper", "block", "h-8", "w-8", "rounded-full"],
 };
 
-export { headerParams, titleParams, nightmodeButtonParams, iconWrapperParams };
+const wrapperHeaderParams = {
+    tagName: "div",
+    classList: ["flex", "gap-4", "items-center"],
+};
+
+export {
+    headerParams,
+    titleParams,
+    nightmodeButtonParams,
+    iconWrapperParams,
+    wrapperHeaderParams,
+};
