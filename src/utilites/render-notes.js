@@ -36,6 +36,9 @@ const eventHandler = (event) => {
     if (isStatus) {
         const currID = isStatus.closest("[data-item]").id;
         changeStatus(findNote(currID));
+        clearRender();
+        renderNotes(notes.favoriteNotes);
+        renderNotes(notes.regularNotes);
     }
 };
 

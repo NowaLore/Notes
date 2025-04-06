@@ -139,7 +139,13 @@ const changeNote = (newNote, oldNote) => {
 };
 
 const changeStatus = (objNote) => {
-    console.log(objNote);
+    objNote.checkbox ? (objNote.checkbox = null) : (objNote.checkbox = "on");
+    removeNote(objNote.id);
+    objNote.isChanged = true;
+    objNote.id = setID(objNote.checkbox);
+    objNote.date = setDate();
+    setNoteToArray(objNote);
+    setDataToStorage(notes);
 };
 
 const notes = initData();
