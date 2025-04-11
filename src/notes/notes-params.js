@@ -36,6 +36,9 @@ const wrapperTitleParams = {
 const noteTitleParams = {
     tagName: "h2",
     classList: ["font-medium", "text-2xl", "text-cyan-600"],
+    attr: {
+        "data-title": "",
+    },
 };
 
 const dateParams = {
@@ -83,6 +86,9 @@ const btnDeleteParams = {
 const bottomNoteParams = {
     tagName: "p",
     classList: ["text-neutral-600", "truncate"],
+    attr: {
+        "data-text": "",
+    },
 };
 
 export {
