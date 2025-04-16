@@ -107,6 +107,3 @@ const renderNotes = (arrayNotes) => {
 
 export default renderNotes;
 export { clearRender };
-// 1. Отследить клик по списку
-// 2. При клике получиьь айди заметки
-// 3. Вызвать удаление из data-handler

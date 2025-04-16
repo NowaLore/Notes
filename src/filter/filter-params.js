@@ -15,6 +15,9 @@ const allNotesBtnParams = {
         "font-medium",
     ],
     text: "All Notes",
+    attr: {
+        "data-filter": "all",
+    },
 };
 
 const favNotesBtnParams = {
@@ -29,6 +32,9 @@ const favNotesBtnParams = {
         "font-medium",
     ],
     text: "Favorites",
+    attr: {
+        "data-filter": "favorite",
+    },
 };
 
 export { filterWrapperParams, allNotesBtnParams, favNotesBtnParams };

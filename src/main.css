@@ -45,7 +45,7 @@ body.dark .icon-addnote {
 }
 
 .real-checkbox:checked + .custom-checkbox {
-    background-image: url(./star-btn_gold.svg);
+    background-image: url(/star-btn_gold.svg);
 }
 
 .scrollbar::-webkit-scrollbar,
