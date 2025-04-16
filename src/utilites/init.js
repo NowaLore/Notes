@@ -1,4 +1,5 @@
 import btnCreator from "../btn-control/btn-control-view.js";
+import filterCreator from "../filter/filter.js";
 import headerCreator from "../header/header-viev.js";
 import { initData, notes } from "./data-handler.js";
 import renderNotes from "./render-notes.js";
@@ -7,6 +8,7 @@ const init = () => {
     initData();
     const appContainer = document.body;
     const headerElement = headerCreator();
+    const filter = filterCreator();
     const wrapperControl = btnCreator();
     const darkModeBtn = headerElement.querySelector("#nightBtn");
 
@@ -15,6 +17,7 @@ const init = () => {
     });
 
     appContainer.append(headerElement);
+    appContainer.append(filter);
     appContainer.append(wrapperControl);
 
     renderNotes(notes.favoriteNotes);
