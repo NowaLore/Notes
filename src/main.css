@@ -83,3 +83,11 @@ body.dark .icon-addnote {
     border-right: 20px solid #189ab4;
     border-bottom: 20px solid #189ab4;
 }
+
+@layer components {
+    button.active {
+        background-color: #fcfcfc !important;
+        border: solid 2px rgb(21 94 117);
+        color: rgb(21 94 117) !important;
+    }
+}

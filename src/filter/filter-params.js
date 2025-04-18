@@ -1,6 +1,9 @@
 const filterWrapperParams = {
     tagName: "div",
     classList: ["flex", "justify-center", "gap-4", "pt-6"],
+    attr: {
+        "data-wrapper": "",
+    },
 };
 
 const allNotesBtnParams = {
