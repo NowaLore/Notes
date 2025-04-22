@@ -15,27 +15,6 @@ body.dark .icon-wrapper {
     background-image: url(./sun-icon-dark.svg);
 }
 
-.icon-addnote {
-    background-image: url(./btn-add-note__icon.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-body.dark .icon-addnote {
-    background-image: url(./btn-add-note__icon-dark.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.custom-checkbox {
-    background-image: url(./star-btn.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-}
-
 .real-checkbox {
     width: 0;
     height: 0;
@@ -85,9 +64,12 @@ body.dark .icon-addnote {
 }
 
 @layer components {
-    button.active {
+    .button-choice {
+        border: solid 2px #ffff !important;
+    }
+    .button-choice.active {
         background-color: #fcfcfc !important;
-        border: solid 2px rgb(21 94 117);
+        border: solid 2px rgb(21 94 117) !important;
         color: rgb(21 94 117) !important;
     }
 }

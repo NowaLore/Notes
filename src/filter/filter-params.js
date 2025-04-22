@@ -16,6 +16,9 @@ const allNotesBtnParams = {
         "text-white",
         "text-xl",
         "font-medium",
+        "dark:bg-white",
+        "dark:text-cyan-600",
+        "button-choice",
     ],
     text: "All Notes",
     attr: {
@@ -33,6 +36,9 @@ const favNotesBtnParams = {
         "text-white",
         "text-xl",
         "font-medium",
+        "dark:bg-white",
+        "dark:text-cyan-600",
+        "button-choice",
     ],
     text: "Favorites",
     attr: {

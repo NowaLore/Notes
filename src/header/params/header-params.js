@@ -21,7 +21,7 @@ const titleParams = {
         "font-medium",
         "font-[Roboto_Slab]",
         "text-cyan-600",
-        "dark:text-white",
+        "dark:text-cyan-400",
     ],
     text: "To-Do",
 };

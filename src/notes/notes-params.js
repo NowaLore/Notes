@@ -20,7 +20,14 @@ const itemParams = {
 
 const noteParams = {
     tagName: "article",
-    classList: ["border-2", "border-cyan-600", "rounded-xl", "mb-4", "p-2"],
+    classList: [
+        "border-2",
+        "border-cyan-600",
+        "rounded-xl",
+        "mb-4",
+        "p-2",
+        "dark:border-white",
+    ],
 };
 
 const topNoteParams = {
@@ -35,7 +42,12 @@ const wrapperTitleParams = {
 
 const noteTitleParams = {
     tagName: "h2",
-    classList: ["font-medium", "text-2xl", "text-cyan-600"],
+    classList: [
+        "font-medium",
+        "text-2xl",
+        "text-cyan-600",
+        "dark:text-cyan-400",
+    ],
     attr: {
         "data-title": "",
     },
@@ -43,7 +55,7 @@ const noteTitleParams = {
 
 const dateParams = {
     tagName: "span",
-    classList: ["text-sm", "text-stone-400"],
+    classList: ["text-sm", "text-stone-400", "dark:text-stone-300"],
 };
 
 const btnWrapperParams = {
@@ -53,7 +65,13 @@ const btnWrapperParams = {
 
 const btnStatusParams = {
     tagName: "button",
-    classList: ["w-6", "h-6", "bg-[url(./star-btn.svg)]"],
+    classList: [
+        "w-6",
+        "h-6",
+        "bg-[url(./star-btn.svg)]",
+        "dark:bg-[url(./star-btn_dark.svg)]",
+        "bg-no-repeat",
+    ],
     attr: {
         "data-status": "",
     },
@@ -61,7 +79,7 @@ const btnStatusParams = {
 
 const btnStatusGoldParams = {
     tagName: "button",
-    classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]"],
+    classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]", "bg-no-repeat"],
     attr: {
         "data-status": "",
     },
@@ -69,7 +87,13 @@ const btnStatusGoldParams = {
 
 const btnEditParams = {
     tagName: "button",
-    classList: ["w-6", "h-6", "bg-[url(./edit-btn.svg)]"],
+    classList: [
+        "w-6",
+        "h-6",
+        "bg-[url(./edit-btn.svg)]",
+        "dark:bg-[url(./edit-btn_dark.svg)]",
+        "bg-no-repeat",
+    ],
     attr: {
         "data-edit": "",
     },
@@ -77,7 +101,13 @@ const btnEditParams = {
 
 const btnDeleteParams = {
     tagName: "button",
-    classList: ["w-6", "h-6", "bg-[url(./trash-btn.svg)]"],
+    classList: [
+        "w-6",
+        "h-6",
+        "bg-[url(./trash-btn.svg)]",
+        "dark:bg-[url(./trash-btn_dark.svg)]",
+        "bg-no-repeat",
+    ],
     attr: {
         "data-del": "",
     },
@@ -85,7 +115,7 @@ const btnDeleteParams = {
 
 const bottomNoteParams = {
     tagName: "p",
-    classList: ["text-neutral-600", "truncate"],
+    classList: ["text-neutral-600", "truncate", "dark:text-neutral-400"],
     attr: {
         "data-text": "",
     },

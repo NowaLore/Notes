@@ -12,6 +12,7 @@ const formParams = {
         "right-1/2",
         "translate-x-1/2",
         "translate-y-1/2",
+        "dark:bg-[#2f353b]",
     ],
 };
 
@@ -36,6 +37,7 @@ const titleInputParams = {
         "outline-none",
         "max-w-[330px]",
         "w-full",
+        "dark:text-white",
     ],
     attr: {
         name: "title",
@@ -44,7 +46,16 @@ const titleInputParams = {
 
 const customCheckboxParams = {
     tagName: "span",
-    classList: ["custom-checkbox"],
+    classList: [
+        "custom-checkbox",
+        "w-8",
+        "h-8",
+        "bg-no-repeat",
+        "bg-size-cover",
+        "bg-[url(./star-btn.svg)]",
+        "dark:bg-[url(./star-btn_dark.svg)]",
+        "block",
+    ],
 };
 
 const wrapperLabelParams = {
@@ -71,6 +82,7 @@ const textareaParams = {
         "outline-none",
         "focus:shadow-lg",
         "mb-4",
+        "dark:text-white",
     ],
     attr: { name: "textarea" },
 };
@@ -116,6 +128,8 @@ const fadeParams = {
         "w-full",
         "h-screen",
         "bg-[#e0e0e0bc]",
+        "dark:bg-[#15576bdc]",
+        "backdrop-blur-sm",
         "fixed",
         "left-0",
         "top-0",
