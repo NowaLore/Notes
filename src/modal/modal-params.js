@@ -4,7 +4,7 @@ const formParams = {
         "py-9",
         "px-7",
         "max-w-[915px]",
-        "w-full",
+        "w-[96%]",
         "bg-white",
         "rounded-xl",
         "fixed",

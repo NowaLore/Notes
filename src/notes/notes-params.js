@@ -7,6 +7,7 @@ const listNotesParams = {
         "max-h-[600px]",
         "overflow-y-auto",
         "pr-4",
+        "w-[96%]",
     ],
     attr: {
         id: "listNotes",
@@ -37,7 +38,7 @@ const topNoteParams = {
 
 const wrapperTitleParams = {
     tagName: "div",
-    classList: ["flex", "gap-4", "items-center"],
+    classList: ["flex", "gap-4", "items-center", "flex-wrap"],
 };
 
 const noteTitleParams = {
@@ -47,6 +48,13 @@ const noteTitleParams = {
         "text-2xl",
         "text-cyan-600",
         "dark:text-cyan-400",
+        // "min-w-[200px]",
+        "overflow-hidden",
+        "text-ellipsis",
+        "max-w-[300px]",
+        "truncate",
+        "xs:w-full",
+        "w-[200px]",
     ],
     attr: {
         "data-title": "",
@@ -55,7 +63,12 @@ const noteTitleParams = {
 
 const dateParams = {
     tagName: "span",
-    classList: ["text-sm", "text-stone-400", "dark:text-stone-300"],
+    classList: [
+        "text-sm",
+        "text-stone-400",
+        "dark:text-stone-300",
+        "min-w-[180px]",
+    ],
 };
 
 const btnWrapperParams = {
@@ -115,7 +128,13 @@ const btnDeleteParams = {
 
 const bottomNoteParams = {
     tagName: "p",
-    classList: ["text-neutral-600", "truncate", "dark:text-neutral-400"],
+    classList: [
+        "text-neutral-600",
+        "truncate",
+        "dark:text-neutral-400",
+        "overflow-hidden",
+        "text-ellipsis",
+    ],
     attr: {
         "data-text": "",
     },

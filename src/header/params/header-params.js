@@ -7,6 +7,7 @@ const headerParams = {
         "py-2.5",
         "flex",
         "justify-between",
+        "items-center",
         "mx-auto",
         "max-w-[1024px]",
         "px-[15px]",
@@ -17,11 +18,12 @@ const headerParams = {
 const titleParams = {
     tagName: "h1",
     classList: [
-        "text-3xl",
+        "text-xl",
         "font-medium",
         "font-[Roboto_Slab]",
         "text-cyan-600",
         "dark:text-cyan-400",
+        "xs:text-3xl",
     ],
     text: "To-Do",
 };
@@ -40,6 +42,10 @@ const nightmodeButtonParams = {
         "flex",
         "justify-center",
         "items-center",
+        "bg-[url(./sun-icon.svg)]",
+        "bg-[70%]",
+        "bg-no-repeat",
+        "dark:bg-[url(./sun-icon-dark.svg)]",
     ],
     attr: {
         id: "nightBtn",

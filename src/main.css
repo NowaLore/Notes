@@ -5,16 +5,6 @@ body.dark {
     background-color: #2f353b;
 }
 
-.icon-wrapper {
-    background-image: url(./sun-icon.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-body.dark .icon-wrapper {
-    background-image: url(./sun-icon-dark.svg);
-}
-
 .real-checkbox {
     width: 0;
     height: 0;
@@ -72,4 +62,7 @@ body.dark .icon-wrapper {
         border: solid 2px rgb(21 94 117) !important;
         color: rgb(21 94 117) !important;
     }
+}
+@theme {
+    --breakpoint-xs: 500px;
 }

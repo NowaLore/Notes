@@ -9,7 +9,7 @@ const filterWrapperParams = {
 const allNotesBtnParams = {
     tagName: "button",
     classList: [
-        "px-16",
+        "px-6",
         "py-2",
         "bg-cyan-600",
         "rounded-lg",
@@ -19,6 +19,7 @@ const allNotesBtnParams = {
         "dark:bg-white",
         "dark:text-cyan-600",
         "button-choice",
+        "xs:px-16",
     ],
     text: "All Notes",
     attr: {
@@ -29,7 +30,7 @@ const allNotesBtnParams = {
 const favNotesBtnParams = {
     tagName: "button",
     classList: [
-        "px-16",
+        "px-6",
         "py-2",
         "bg-cyan-600",
         "rounded-lg",
@@ -39,6 +40,7 @@ const favNotesBtnParams = {
         "dark:bg-white",
         "dark:text-cyan-600",
         "button-choice",
+        "xs:px-16",
     ],
     text: "Favorites",
     attr: {
