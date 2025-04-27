@@ -12,7 +12,7 @@ import {
     noteParams,
     noteTitleParams,
     topNoteParams,
-    wrapperTitleParams,
+    wrapperDateAndBtnsParams,
 } from "../notes/notes-params.js";
 import creatorElement from "./creator.js";
 import { findNote, notes, removeNote, changeStatus } from "./data-handler.js";
@@ -66,22 +66,22 @@ const renderNotes = (arrayNotes) => {
         const top = creatorElement(topNoteParams);
         article.append(top);
 
-        const wrapperTitle = creatorElement(wrapperTitleParams);
-        top.append(wrapperTitle);
-
         const title = creatorElement(noteTitleParams);
         title.innerText = element.title;
-        wrapperTitle.append(title);
+        top.append(title);
+
+        const wrapperDateAndBtns = creatorElement(wrapperDateAndBtnsParams);
+        top.append(wrapperDateAndBtns);
 
         let isChanged = element.isChanged ? "Changed" : "Created";
         const date = creatorElement(dateParams);
         const dateString = `${isChanged} ${element.date.date} in ${element.date.time}`;
         date.innerText = dateString;
 
-        wrapperTitle.append(date);
+        wrapperDateAndBtns.append(date);
 
         const btnWrapper = creatorElement(btnWrapperParams);
-        top.append(btnWrapper);
+        wrapperDateAndBtns.append(btnWrapper);
 
         if (element.checkbox) {
             const btnStatusGold = creatorElement(btnStatusGoldParams);

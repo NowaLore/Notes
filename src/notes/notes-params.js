@@ -33,12 +33,20 @@ const noteParams = {
 
 const topNoteParams = {
     tagName: "div",
-    classList: ["flex", "justify-between", "mb-[8px]"],
+    classList: ["flex", "justify-between", "mb-[8px]", "flex-wrap"],
 };
 
-const wrapperTitleParams = {
+const wrapperDateAndBtnsParams = {
     tagName: "div",
-    classList: ["flex", "gap-4", "items-center", "flex-wrap"],
+    classList: [
+        "flex",
+        "xs:gap-4",
+        "justify-between",
+        "items-center",
+        "flex-wrap",
+        "w-full",
+        "xs:w-[285px]",
+    ],
 };
 
 const noteTitleParams = {
@@ -48,12 +56,9 @@ const noteTitleParams = {
         "text-2xl",
         "text-cyan-600",
         "dark:text-cyan-400",
-        // "min-w-[200px]",
         "overflow-hidden",
         "text-ellipsis",
-        "max-w-[300px]",
         "truncate",
-        "xs:w-full",
         "w-[200px]",
     ],
     attr: {
@@ -152,6 +157,6 @@ export {
     btnStatusGoldParams,
     btnEditParams,
     btnDeleteParams,
-    wrapperTitleParams,
+    wrapperDateAndBtnsParams,
     btnWrapperParams,
 };
