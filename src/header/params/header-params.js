@@ -42,10 +42,10 @@ const nightmodeButtonParams = {
         "flex",
         "justify-center",
         "items-center",
-        "bg-[url(./sun-icon.svg)]",
+        "bg-[url(/sun-icon.svg)]",
         "bg-[70%]",
         "bg-no-repeat",
-        "dark:bg-[url(./sun-icon-dark.svg)]",
+        "dark:bg-[url(/sun-icon-dark.svg)]",
     ],
     attr: {
         id: "nightBtn",
