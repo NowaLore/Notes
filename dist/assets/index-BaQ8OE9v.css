@@ -849,28 +849,28 @@
     background-color: var(--color-white);
   }
 
-  .bg-\[url\(\.\/btn-add-note__icon\.svg\)\] {
-    background-image: url("./btn-add-note__icon.svg");
-  }
-
   .bg-\[url\(\.\/edit-btn\.svg\)\] {
     background-image: url("./edit-btn.svg");
   }
 
-  .bg-\[url\(\.\/star-btn\.svg\)\] {
-    background-image: url("./star-btn.svg");
+  .bg-\[url\(\/btn-add-note__icon\.svg\)\] {
+    background-image: url("../btn-add-note__icon.svg");
   }
 
-  .bg-\[url\(\.\/star-btn_gold\.svg\)\] {
-    background-image: url("./star-btn_gold.svg");
+  .bg-\[url\(\/star-btn\.svg\)\] {
+    background-image: url("../star-btn.svg");
   }
 
-  .bg-\[url\(\.\/sun-icon\.svg\)\] {
-    background-image: url("./sun-icon.svg");
+  .bg-\[url\(\/star-btn_gold\.svg\)\] {
+    background-image: url("../star-btn_gold.svg");
   }
 
-  .bg-\[url\(\.\/trash-btn\.svg\)\] {
-    background-image: url("./trash-btn.svg");
+  .bg-\[url\(\/sun-icon\.svg\)\] {
+    background-image: url("../sun-icon.svg");
+  }
+
+  .bg-\[url\(\/trash-btn\.svg\)\] {
+    background-image: url("../trash-btn.svg");
   }
 
   .bg-\[70\%\] {
@@ -1028,24 +1028,24 @@
     background-color: var(--color-white);
   }
 
-  .dark\:bg-\[url\(\.\/btn-add-note__icon-dark\.svg\)\]:where(.dark, .dark *) {
-    background-image: url("./btn-add-note__icon-dark.svg");
+  .dark\:bg-\[url\(\/btn-add-note__icon-dark\.svg\)\]:where(.dark, .dark *) {
+    background-image: url("../btn-add-note__icon-dark.svg");
   }
 
-  .dark\:bg-\[url\(\.\/edit-btn_dark\.svg\)\]:where(.dark, .dark *) {
-    background-image: url("./edit-btn_dark.svg");
+  .dark\:bg-\[url\(\/edit-btn_dark\.svg\)\]:where(.dark, .dark *) {
+    background-image: url("../edit-btn_dark.svg");
   }
 
-  .dark\:bg-\[url\(\.\/star-btn_dark\.svg\)\]:where(.dark, .dark *) {
-    background-image: url("./star-btn_dark.svg");
+  .dark\:bg-\[url\(\/star-btn_dark\.svg\)\]:where(.dark, .dark *) {
+    background-image: url("../star-btn_dark.svg");
   }
 
-  .dark\:bg-\[url\(\.\/sun-icon-dark\.svg\)\]:where(.dark, .dark *) {
-    background-image: url("./sun-icon-dark.svg");
+  .dark\:bg-\[url\(\/sun-icon-dark\.svg\)\]:where(.dark, .dark *) {
+    background-image: url("../sun-icon-dark.svg");
   }
 
-  .dark\:bg-\[url\(\.\/trash-btn_dark\.svg\)\]:where(.dark, .dark *) {
-    background-image: url("./trash-btn_dark.svg");
+  .dark\:bg-\[url\(\/trash-btn_dark\.svg\)\]:where(.dark, .dark *) {
+    background-image: url("../trash-btn_dark.svg");
   }
 
   .dark\:text-cyan-400:where(.dark, .dark *) {

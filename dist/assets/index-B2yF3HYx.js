@@ -259,8 +259,8 @@ const btnStatusParams = {
   classList: [
     "w-6",
     "h-6",
-    "bg-[url(./star-btn.svg)]",
-    "dark:bg-[url(./star-btn_dark.svg)]",
+    "bg-[url(/star-btn.svg)]",
+    "dark:bg-[url(/star-btn_dark.svg)]",
     "bg-no-repeat"
   ],
   attr: {
@@ -269,7 +269,7 @@ const btnStatusParams = {
 };
 const btnStatusGoldParams = {
   tagName: "button",
-  classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]", "bg-no-repeat"],
+  classList: ["w-6", "h-6", "bg-[url(/star-btn_gold.svg)]", "bg-no-repeat"],
   attr: {
     "data-status": ""
   }
@@ -280,7 +280,7 @@ const btnEditParams = {
     "w-6",
     "h-6",
     "bg-[url(./edit-btn.svg)]",
-    "dark:bg-[url(./edit-btn_dark.svg)]",
+    "dark:bg-[url(/edit-btn_dark.svg)]",
     "bg-no-repeat"
   ],
   attr: {
@@ -292,8 +292,8 @@ const btnDeleteParams = {
   classList: [
     "w-6",
     "h-6",
-    "bg-[url(./trash-btn.svg)]",
-    "dark:bg-[url(./trash-btn_dark.svg)]",
+    "bg-[url(/trash-btn.svg)]",
+    "dark:bg-[url(/trash-btn_dark.svg)]",
     "bg-no-repeat"
   ],
   attr: {
@@ -435,8 +435,8 @@ const customCheckboxParams = {
     "h-8",
     "bg-no-repeat",
     "bg-size-cover",
-    "bg-[url(./star-btn.svg)]",
-    "dark:bg-[url(./star-btn_dark.svg)]",
+    "bg-[url(/star-btn.svg)]",
+    "dark:bg-[url(/star-btn_dark.svg)]",
     "block"
   ]
 };
@@ -594,8 +594,8 @@ const addNoteIconParams = {
     "block",
     "w-10",
     "h-10",
-    "bg-[url(./btn-add-note__icon.svg)]",
-    "dark:bg-[url(./btn-add-note__icon-dark.svg)]",
+    "bg-[url(/btn-add-note__icon.svg)]",
+    "dark:bg-[url(/btn-add-note__icon-dark.svg)]",
     "bg-no-repeat"
   ]
 };
@@ -741,10 +741,10 @@ const nightmodeButtonParams = {
     "flex",
     "justify-center",
     "items-center",
-    "bg-[url(./sun-icon.svg)]",
+    "bg-[url(/sun-icon.svg)]",
     "bg-[70%]",
     "bg-no-repeat",
-    "dark:bg-[url(./sun-icon-dark.svg)]"
+    "dark:bg-[url(/sun-icon-dark.svg)]"
   ],
   attr: {
     id: "nightBtn"
@@ -822,4 +822,4 @@ const init = () => {
   renderNotes(notes.regularNotes);
 };
 init();
-//# sourceMappingURL=index-CZIrkrIH.js.map
+//# sourceMappingURL=index-B2yF3HYx.js.map
