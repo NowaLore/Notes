@@ -86,8 +86,8 @@ const btnStatusParams = {
     classList: [
         "w-6",
         "h-6",
-        "bg-[url(./star-btn.svg)]",
-        "dark:bg-[url(./star-btn_dark.svg)]",
+        "bg-[url(/star-btn.svg)]",
+        "dark:bg-[url(/star-btn_dark.svg)]",
         "bg-no-repeat",
     ],
     attr: {
@@ -97,7 +97,7 @@ const btnStatusParams = {
 
 const btnStatusGoldParams = {
     tagName: "button",
-    classList: ["w-6", "h-6", "bg-[url(./star-btn_gold.svg)]", "bg-no-repeat"],
+    classList: ["w-6", "h-6", "bg-[url(/star-btn_gold.svg)]", "bg-no-repeat"],
     attr: {
         "data-status": "",
     },
@@ -108,8 +108,8 @@ const btnEditParams = {
     classList: [
         "w-6",
         "h-6",
-        "bg-[url(./edit-btn.svg)]",
-        "dark:bg-[url(./edit-btn_dark.svg)]",
+        "bg-[url(/edit-btn.svg)]",
+        "dark:bg-[url(/edit-btn_dark.svg)]",
         "bg-no-repeat",
     ],
     attr: {
@@ -122,8 +122,8 @@ const btnDeleteParams = {
     classList: [
         "w-6",
         "h-6",
-        "bg-[url(./trash-btn.svg)]",
-        "dark:bg-[url(./trash-btn_dark.svg)]",
+        "bg-[url(/trash-btn.svg)]",
+        "dark:bg-[url(/trash-btn_dark.svg)]",
         "bg-no-repeat",
     ],
     attr: {

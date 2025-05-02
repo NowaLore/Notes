@@ -52,8 +52,8 @@ const customCheckboxParams = {
         "h-8",
         "bg-no-repeat",
         "bg-size-cover",
-        "bg-[url(./star-btn.svg)]",
-        "dark:bg-[url(./star-btn_dark.svg)]",
+        "bg-[url(/star-btn.svg)]",
+        "dark:bg-[url(/star-btn_dark.svg)]",
         "block",
     ],
 };

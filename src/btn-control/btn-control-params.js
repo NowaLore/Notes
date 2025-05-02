@@ -21,8 +21,8 @@ const addNoteIconParams = {
         "block",
         "w-10",
         "h-10",
-        "bg-[url(./btn-add-note__icon.svg)]",
-        "dark:bg-[url(./btn-add-note__icon-dark.svg)]",
+        "bg-[url(/btn-add-note__icon.svg)]",
+        "dark:bg-[url(/btn-add-note__icon-dark.svg)]",
         "bg-no-repeat",
     ],
 };
